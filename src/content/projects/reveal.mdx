@@ -1,19 +1,150 @@
 ---
 title: "Reveal"
 description: "A modern, searchable interface for exploring EGW Writings with enhanced navigation and study tools."
-link: "#"
+pubDate: "2024-03-20"
+tags: ["Svelte", "TypeScript", "TailwindCSS"]
+github: "https://github.com/ezra-en/reveal"
+link: "https://reveal.ezraen.dev"
+order: 1
 ---
 
-## About Reveal
+import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { 
+  BookOpen, 
+  Target, 
+  Code2, 
+  Sparkles,
+  Lightbulb,
+  GanttChart 
+} from "lucide-react"
 
-Reveal modernizes the experience of exploring EGW Writings through an intuitive interface and powerful search capabilities.
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 not-prose">
+  <Card className="p-6 md:col-span-2 bg-amber-50">
+    <BookOpen className="h-8 w-8 text-amber-600 mb-4" />
+    <h2 className="text-2xl font-bold mb-2">Overview</h2>
+    <p>
+      Reveal modernizes the experience of exploring EGW Writings through an intuitive interface 
+      and powerful search capabilities. The project combines modern web technologies with careful 
+      UX design to create a distraction-free reading and study experience.
+    </p>
+  </Card>
 
-### Key Features
+  <Card className="p-6 bg-blue-50">
+    <Code2 className="h-8 w-8 text-blue-600 mb-4" />
+    <h2 className="text-2xl font-bold mb-2">Tech Stack</h2>
+    <div className="flex flex-wrap gap-2">
+      <Badge variant="outline">Svelte</Badge>
+      <Badge variant="outline">TypeScript</Badge>
+      <Badge variant="outline">TailwindCSS</Badge>
+      <Badge variant="outline">shadcn/ui</Badge>
+    </div>
+  </Card>
+</div>
 
-- **Enhanced Search**: Find exactly what you're looking for with advanced search options
-- **Study Tools**: Highlight, annotate, and organize your research
-- **Modern Interface**: Clean, responsive design that works across all devices
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 not-prose">
+  <Card className="p-6 bg-red-50">
+    <Target className="h-8 w-8 text-red-600 mb-4" />
+    <h2 className="text-2xl font-bold mb-2">The Problem</h2>
+    <ul className="list-disc list-inside space-y-2">
+      <li>Cluttered, overwhelming interfaces</li>
+      <li>Poor navigation between resources</li>
+      <li>Interrupted reading experience</li>
+      <li>Limited search capabilities</li>
+    </ul>
+  </Card>
 
-### Development Journey
+  <Card className="p-6 bg-green-50">
+    <Sparkles className="h-8 w-8 text-green-600 mb-4" />
+    <h2 className="text-2xl font-bold mb-2">Solution</h2>
+    <ul className="list-disc list-inside space-y-2">
+      <li>Clean, focused reading interface</li>
+      <li>Smart cross-reference system</li>
+      <li>Enhanced search capabilities</li>
+      <li>Responsive design across devices</li>
+    </ul>
+  </Card>
+</div>
 
-The project started as an exploration of how modern web technologies could improve...
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 not-prose">
+  <Card className="p-6 md:col-span-2 bg-purple-50">
+    <Lightbulb className="h-8 w-8 text-purple-600 mb-4" />
+    <h2 className="text-2xl font-bold mb-2">Key Features</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <h3 className="font-semibold mb-2">Search & Navigation</h3>
+        <ul className="list-disc list-inside space-y-1 text-sm">
+          <li>Real-time search suggestions</li>
+          <li>Advanced filtering options</li>
+          <li>Context-aware results</li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-semibold mb-2">Study Tools</h3>
+        <ul className="list-disc list-inside space-y-1 text-sm">
+          <li>Side-by-side translations</li>
+          <li>Inline cross-references</li>
+          <li>Dark mode support</li>
+        </ul>
+      </div>
+    </div>
+  </Card>
+
+  <Card className="p-6 bg-yellow-50">
+    <GanttChart className="h-8 w-8 text-yellow-600 mb-4" />
+    <h2 className="text-2xl font-bold mb-2">Challenges</h2>
+    <ul className="list-disc list-inside space-y-2 text-sm">
+      <li>Complex state management</li>
+      <li>Search optimization</li>
+      <li>Performance with parallel views</li>
+      <li>Cross-device consistency</li>
+    </ul>
+  </Card>
+</div>
+
+<div className="grid grid-cols-1 gap-4 not-prose">
+  <Card className="p-6 bg-gray-50">
+    <h2 className="text-2xl font-bold mb-4">Learning Outcomes</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <h3 className="font-semibold mb-2">Technical</h3>
+        <ul className="list-disc list-inside space-y-1 text-sm">
+          <li>React component architecture</li>
+          <li>State management patterns</li>
+          <li>API integration strategies</li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-semibold mb-2">Design</h3>
+        <ul className="list-disc list-inside space-y-1 text-sm">
+          <li>Accessibility-first approach</li>
+          <li>Responsive design patterns</li>
+          <li>User experience optimization</li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-semibold mb-2">Process</h3>
+        <ul className="list-disc list-inside space-y-1 text-sm">
+          <li>User-focused development</li>
+          <li>Performance optimization</li>
+          <li>Iterative improvement</li>
+        </ul>
+      </div>
+    </div>
+  </Card>
+</div>
+
+<div className="mt-8 flex gap-4 not-prose">
+  <a 
+    href="https://github.com/ezra-en/reveal" 
+    className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md"
+  >
+    View Source
+  </a>
+  <a 
+    href="https://reveal.ezraen.dev" 
+    className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md"
+  >
+    Live Demo
+  </a>
+</div>

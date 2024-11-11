@@ -1,17 +1,84 @@
 ---
 title: "Ladder"
 description: "Rethinking browser tab management through spatial organization and contextual grouping."
-link: "#"
+link: "https://github.com/yourusername/ladder"
 ---
 
-## About Ladder
+<div className="max-w-4xl mx-auto">
+  <header className="space-y-4 mb-12">
+    <div className="flex flex-wrap gap-2">
+      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-sm">Svelte</span>
+      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-sm">Chrome Extensions API</span>
+      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-sm">TypeScript</span>
+      <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-sm">TailwindCSS</span>
+    </div>
+  </header>
 
-Ladder is an experiment in making browser tab management more intuitive through spatial organization and context awareness.
+  ## About Ladder
 
-### The Problem
+  Browser tabs have become our primary interface with information, but managing them remains a challenge. Ladder is a Chrome extension that reimagines tab management through spatial organization and context preservation.
 
-Browser tabs have become our primary interface with information, but managing them remains a challenge. Ladder approaches this problem from a new angle.
+  <div className="grid md:grid-cols-2 gap-8 my-8">
+    <div>
+      ### Core Features
+      
+      - **Spatial Organization**: Intuitive drag-and-drop interface for arranging tabs within and between windows
+      - **Window Groups**: Preserve context by managing related tabs together
+      - **Smart Archiving**: Save and restore entire windows or individual tabs with their metadata
+      - **Resource Management**: "Discard" tabs to free up memory while maintaining quick access
+      - **Full-Text Search**: Quickly find tabs across both active and archived states
+    </div>
 
-### The Solution
+    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+      ### Technical Highlights
 
-By treating tabs as spatial objects that can be organized contextually, Ladder provides a more natural way to manage your browsing workspace...
+      - Built with Svelte for performant reactivity
+      - Chrome Extensions API for deep browser integration
+      - TypeScript for type safety and better developer experience
+      - Virtual scrolling for handling large numbers of tabs
+      - Efficient local storage for archiving functionality
+    </div>
+  </div>
+
+ 
+  ## Design Philosophy
+
+  Ladder's design is guided by three core principles:
+
+  <div className="grid md:grid-cols-3 gap-4 my-8">
+    <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+      <h4 className="font-semibold mb-2">Spatial Intuition</h4>
+      <p className="text-sm">Organization should feel as natural as arranging items on a desk</p>
+    </div>
+    
+    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+      <h4 className="font-semibold mb-2">Context Preservation</h4>
+      <p className="text-sm">Windows as workspaces, maintaining task and project context</p>
+    </div>
+    
+    <div className="p-4 bg-cyan-50 dark:bg-cyan-900/20 rounded-lg">
+      <h4 className="font-semibold mb-2">Lightweight Persistence</h4>
+      <p className="text-sm">Archive and restore with minimal cognitive overhead</p>
+    </div>
+  </div>
+
+  ## Future Development
+
+  The next phase of Ladder's development will focus on:
+
+  - Cross-device synchronization capabilities
+  - Enhanced tab relationship visualization
+  - Integration with popular productivity tools
+  - Performance optimizations for very large tab sets
+  - Customizable keyboard shortcuts and gestures
+
+  ## Learning Outcomes
+
+  Building Ladder provided valuable experience in:
+  - Chrome Extension development and its constraints
+  - Complex state management in Svelte
+  - Building intuitive drag-and-drop interfaces
+  - Optimizing performance for large datasets
+  - Designing for user privacy and data persistence
+
+</div>
