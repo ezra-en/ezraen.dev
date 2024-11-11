@@ -1,19 +1,211 @@
 ---
 title: "DynDeck"
-description: "A local-first presentation tool that combines the power of dynamic content with the reliability of offline-first design."
-link: "#"
+description: "A next-generation presentation platform that reimagines how we create, collaborate on, and deliver impactful presentations."
+link: "https://dyndeck.com"
 ---
+
+import BentoGrid from '@/components/BentoGrid';
+
+<div className="prose dark:prose-invert max-w-none prose-p:text-start">
 
 ## About DynDeck
 
-DynDeck is a presentation tool that rethinks how we create and deliver presentations. Built with local-first principles in mind, it ensures your content is always available and under your control.
+DynDeck is revolutionizing presentation software by combining the power of dynamic content with the reliability of local-first design. Built for modern presenters who need flexibility, reliability, and powerful features without compromising on simplicity.
 
-### Features
+### Vision
 
-- **Local-First Design**: Your presentations live on your machine first
-- **Dynamic Content**: Embed live code, real-time data, and interactive elements
-- **Offline Reliability**: Work anywhere, anytime, without depending on the cloud
+DynDeck emerged from a simple observation: existing presentation tools haven't kept pace with how we actually create and deliver content in today's multi-display, multi-language, collaboration-heavy world. We're building a platform that brings presentation software into the modern era, with features that speakers, churches, educators, and professionals actually need.
 
-### Technical Stack
+### Core Features
 
-Built with modern web technologies focusing on performance and reliability...
+export const coreFeatures = [
+  {
+    icon: "🏠",
+    title: "Local-First Architecture",
+    description: "Your presentations, your control. Work offline with full feature availability.",
+    features: [
+      "Your data stays on your machine",
+      "Synchronize on your terms",
+      "No internet required for presenting",
+      "Automatic local backup"
+    ],
+    // featured: true
+  },
+  {
+    icon: "🎨",
+    title: "Modern Design Experience",
+    description: "Intuitive canvas with smart controls inspired by industry leaders.",
+    features: [
+      "WYSIWYG canvas editor",
+      "Smart templates",
+      "Advanced layer management",
+      "Rich text with markdown"
+    ]
+  },
+  {
+    icon: "🌐",
+    title: "Smart Display Management",
+    description: "Revolutionary multi-display support for any presentation environment.",
+    features: [
+      "Automatic screen detection",
+      "Independent display control",
+      "Real-time preview",
+      "OBS and NDI integration"
+    ]
+  }
+];
+
+<div className="-mx-4">
+  <BentoGrid items={coreFeatures} />
+</div>
+
+### Professional Features
+
+export const proFeatures = [
+  {
+    icon: "🔄",
+    title: "Universal Compatibility",
+    description: "Seamless integration with existing workflows and tools.",
+    features: [
+      "PowerPoint (PPTX) import/export",
+      "ProPresenter compatibility",
+      "Cross-platform support",
+      "Smart asset management"
+    ],
+    // featured: true
+  },
+  {
+    icon: "🌍",
+    title: "Global Audience Ready",
+    description: "Built-in support for international presentations.",
+    features: [
+      "Multi-language displays",
+      "Real-time language switching",
+      "Smart text reflow",
+      "Vertical text support"
+    ]
+  },
+  {
+    icon: "👥",
+    title: "Collaboration Tools",
+    description: "Modern team features for seamless production workflows.",
+    features: [
+      "Real-time multi-user editing",
+      "Mobile remote control",
+      "Role-based access",
+      "Team communication tools"
+    ]
+  }
+];
+
+<div className="-mx-4">
+  <BentoGrid items={proFeatures} />
+</div>
+
+### Media & Technical Features
+
+export const techFeatures = [
+  {
+    icon: "🎵",
+    title: "Rich Media Support",
+    description: "Comprehensive media handling for modern presentations.",
+    features: [
+      "Advanced video/audio playback",
+      "Caption support",
+      "Live camera integration",
+      "Smart aspect ratio control"
+    ],
+    // featured: true
+  },
+  {
+    icon: "🔌",
+    title: "Extensible Platform",
+    description: "Built for customization and integration.",
+    features: [
+      "Plugin API",
+      "Template engine",
+      "Custom scripting",
+      "External data integration"
+    ]
+  },
+  {
+    icon: "⚡",
+    title: "Technical Innovation",
+    description: "Cutting-edge technology with broad compatibility.",
+    features: [
+      "Modern web standards",
+      "Broadcast Channel API",
+      "WebRTC support",
+      "Advanced font management"
+    ]
+  }
+];
+
+<div className="-mx-4">
+  <BentoGrid items={techFeatures} />
+</div>
+
+### Use Cases
+
+export const useCases = [
+  {
+    icon: "⛪",
+    title: "Houses of Worship",
+    description: "Comprehensive tools for modern worship experiences.",
+    features: [
+      "Multi-language displays",
+      "Live stream integration",
+      "Scripture management",
+      "Multi-screen control"
+    ],
+    // featured: true
+  },
+  {
+    icon: "🎓",
+    title: "Education",
+    description: "Engaging tools for modern learning environments.",
+    features: [
+      "Interactive presentations",
+      "Student engagement tools",
+      "Multi-language support",
+      "Remote learning features"
+    ]
+  },
+  {
+    icon: "💼",
+    title: "Business",
+    description: "Professional tools for impactful presentations.",
+    features: [
+      "Brand template management",
+      "Remote collaboration",
+      "Multi-display support",
+      "Asset library"
+    ]
+  }
+];
+
+<div className="-mx-4">
+  <BentoGrid items={useCases} />
+</div>
+
+### Why DynDeck?
+
+In a world where presentation software often feels stuck in the past, DynDeck brings a fresh perspective. We're not just building another slideshow maker – we're creating a platform that understands and adapts to how modern presentations are actually created and delivered.
+
+Whether you're running a church service with multiple languages, delivering a corporate presentation across remote offices, or teaching a hybrid classroom, DynDeck provides the tools you need while maintaining the simplicity you want.
+
+
+### Get Started
+
+DynDeck is currently in active development. Email us at <a href="mailto:support@dyndeck.com" data-obfuscation="0"
+             class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white ">
+             support@dyndeck.com
+          </a> for early access opportunities.
+
+{/* <div className="flex flex-wrap gap-4 mt-6 not-prose">
+  <a href="#" className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md">Join the Waitlist</a>
+  <a href="#" className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md">View Documentation</a>
+  <a href="#" className="border border-input bg-background hover:bg-accent hover:text-accent-foreground px-4 py-2 rounded-md">GitHub</a>
+</div> */}
+
+</div>

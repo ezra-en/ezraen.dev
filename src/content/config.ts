@@ -13,9 +13,16 @@ const posts = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    date: z.string(),
-    description: z.string(),
-  }),
+    date: z.coerce.date(),
+    tags: z.array(z.string()).optional(),
+    draft: z.boolean().optional().default(false),
+    description: z.string().optional(),
+    // For series of posts
+    series: z.object({
+      name: z.string(),
+      order: z.number()
+    }).optional(),
+  })
 });
 
 export const collections = {

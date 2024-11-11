@@ -1,0 +1,57 @@
+---
+# src/content/posts/loving-ink-and-switch.mdx
+title: "I love Ink & Switch"
+date: 2024-08-25T01:33:00+8:00
+tags: ["ink-and-switch", "notes", "thoughts", "neurodivergent"]
+description: "Thoughts on note-taking, time-based interfaces, and building tools for thought."
+---
+
+There's all this stuff floating around in my head. We call them ideas, but being neurodivergent, ideas are more nebulous clouds which can come and go, but often leave a bit of a residue, a friction even if they disappear, a kind of shadow.
+
+Which means ideas may come and go, but they never fully leave. Some I wish would stick around longer than others, but others I wish would leave sooner than not.
+
+Thankfully, today I've found a way to move forward productively on some of these more productive ideas, hence why I love Ink & Switch.
+
+Via their [Dispatch](https://www.inkandswitch.com/newsletter/) (which doesn't show up very easily, mind you. With all the talk about time-based interfaces, their feed is an awful example of that) I found out about Alexander Obernauer's work on OLLOS, which is a wonderful exploratory treatise on time and its interaction with the fragments and artefacts of our day and life.
+
+[Alex's article](https://alexanderobenauer.com/ollos/) on this really helped me catalyse thought on what time's role is in the artefacts I produce (notes, thoughts, documents, whatever) and the cognitive load my tools are supposed to take on by making it easy to write for later, a practise somewhat facilitated by tools like the spaced recall (spaced repetition to him) and the "Today" recall and review view.
+
+## Core Concepts I've Pinned Down
+
+### Autosaved Edit History
+- With OLLOS I've come to recognise how important a time-based context is for me
+- Edit history is important for that, and a good user-facing interface to that History is just as important
+- Timelines and depicting linking across said timelines is something that will be tough to do as information density arises
+- Autosaving is the foundation of a robust edit history
+
+### Newline-based blocking
+- Notion was the first to introduce this to me
+- The important concept is the ability to reorder and change the hierarchy of a small enough unit of thought
+- The reification of the newline-delimited block (nd-block) into a hierarchy in combination with an edit history just made concepts easier for me to express
+
+## What I'm Building
+
+I don't have a name for this quite yet, but here's what I aim to build and dogfood for my own blog:
+
+1. **Git-based publication**
+   - Push to publish
+   - Git provides many primitives to make this work robustly
+
+2. **CRDT-based edit history**
+   - Must be part of the Git history
+   - Sits on top of Git
+
+3. **Local-first editor experience**
+   - Completely free (as long as git hosting and static site hosting is free)
+   - First-class local-first experience is necessary
+
+4. **Astro Integration**
+   - Supports most popular frameworks via Islands
+   - Provides CMS primitives
+   - Could make headless CMS experience a compile-time event
+
+## On Concept-based Design
+
+This isn't directly related to note-taking, but I had to write this down for why I love Ink & Switch. They turn my vibes into clear concepts I can exposit upon and further develop, they put a name to these nebulous things we call ideas and crystallise them for further catalysis.
+
+I'm defining Concept-based Design as a design thought process where you name and shame the vibes you're getting in order to convert them into actionable artefacts: Concepts. If you don't care about this, feel free not to, this is for my fellow NDs who have to explicitly learn how to think the "obvious" in order to make sense of this neurotypical world.
