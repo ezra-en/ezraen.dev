@@ -4,7 +4,8 @@ import { Mail } from "lucide-react";
 import { getCollection } from "astro:content";
 import { format } from "date-fns";
 
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects"))
+  .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 const posts = await getCollection("posts");
 ---
 
