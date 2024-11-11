@@ -1,0 +1,60 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Prose from '../../components/Prose.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<Layout title={`${project.data.title} | ezraen`}>
+  <div class="min-h-screen bg-white dark:bg-gray-900 px-4 sm:px-8 md:px-16 py-12">
+    <main class="max-w-4xl mx-auto">
+      {/* Header with logotype */}
+      <header class="mb-16">
+        <a href="/" class="inline-block">
+          <div class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white dark:invert">
+            <img src="/logotype.svg" alt="ezraen's logotype" class="h-8" />
+          </div>
+        </a>
+      </header>
+
+      <article class="prose prose-gray dark:prose-invert max-w-none">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+          {project.data.title}
+        </h1>
+        
+        <p class="text-lg font-serif text-gray-600 dark:text-gray-300 mb-8">
+          {project.data.description}
+        </p>
+
+        {project.data.link && (
+          <div class="mb-12">
+            <a 
+              href={project.data.link}
+              class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project →
+            </a>
+          </div>
+        )}
+
+        <Prose>
+          <Content />
+        </Prose>
+      </article>
+    </main>
+  </div>
+</Layout>
