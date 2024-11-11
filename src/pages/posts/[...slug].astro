@@ -42,7 +42,7 @@ const { Content } = await post.render();
         </h1>
         <div class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
           <time datetime={post.data.date.toISOString()}>
-            {format(post.data.date, 'MMMM d, yyyy O')}
+            {format(post.data.date, 'MMMM d, yyyy, K:mmbb O')}
           </time>
           {post.data.tags && (
             <div class="flex gap-2 flex-wrap">
