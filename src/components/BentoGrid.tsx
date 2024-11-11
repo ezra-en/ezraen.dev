@@ -2,7 +2,7 @@
 import { Card } from "@/components/ui/card";
 import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from "react";
 
-const BentoGrid = ({ items }: {items: { featured: any; icon: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; features: any[]; }}) => {
+const BentoGrid = ({ items }: {items: { featured: any; icon: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; features: any[]; }[]}) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8 not-prose">
       {/* biome-ignore lint/suspicious/noExplicitAny: <explanation> */}
