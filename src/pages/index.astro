@@ -6,7 +6,8 @@ import { format } from "date-fns";
 
 const projects = (await getCollection("projects"))
   .sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
-const posts = await getCollection("posts");
+const posts = (await getCollection("posts"))
+  .sort((a, b) => (b.data.date - a.data.date));
 ---
 
 <Layout title="ezraen">
@@ -27,8 +28,7 @@ const posts = await getCollection("posts");
       <!-- Introduction -->
       <section class="mb-20">
         <p class="text-lg sm:text-xl font-serif text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl">
-          I'm a developer crafting digital tools at the intersection of creativity and computing. 
-          Currently building software that augments human thought and enables new forms of creative expression.
+          I'm a developer crafting digital tools at the intersection of creativity, utility and computing. Currently building software that works for humans. We shape our tools, and our tools shape us.
         </p>
         
         <div class="flex space-x-6 mt-8">
