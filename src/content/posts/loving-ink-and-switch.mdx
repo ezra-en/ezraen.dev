@@ -5,53 +5,55 @@ date: 2024-08-25T01:33:00+8:00
 tags: ["ink-and-switch", "notes", "thoughts", "neurodivergent"]
 description: "Thoughts on note-taking, time-based interfaces, and building tools for thought."
 ---
-
-There's all this stuff floating around in my head. We call them ideas, but being neurodivergent, ideas are more nebulous clouds which can come and go, but often leave a bit of a residue, a friction even if they disappear, a kind of shadow.
-
-Which means ideas may come and go, but they never fully leave. Some I wish would stick around longer than others, but others I wish would leave sooner than not.
-
-Thankfully, today I've found a way to move forward productively on some of these more productive ideas, hence why I love Ink & Switch.
-
-Via their [Dispatch](https://www.inkandswitch.com/newsletter/) (which doesn't show up very easily, mind you. With all the talk about time-based interfaces, their feed is an awful example of that) I found out about Alexander Obernauer's work on OLLOS, which is a wonderful exploratory treatise on time and its interaction with the fragments and artefacts of our day and life.
-
-[Alex's article](https://alexanderobenauer.com/ollos/) on this really helped me catalyse thought on what time's role is in the artefacts I produce (notes, thoughts, documents, whatever) and the cognitive load my tools are supposed to take on by making it easy to write for later, a practise somewhat facilitated by tools like the spaced recall (spaced repetition to him) and the "Today" recall and review view.
-
-## Core Concepts I've Pinned Down
-
-### Autosaved Edit History
-- With OLLOS I've come to recognise how important a time-based context is for me
-- Edit history is important for that, and a good user-facing interface to that History is just as important
-- Timelines and depicting linking across said timelines is something that will be tough to do as information density arises
-- Autosaving is the foundation of a robust edit history
-
-### Newline-based blocking
-- Notion was the first to introduce this to me
-- The important concept is the ability to reorder and change the hierarchy of a small enough unit of thought
-- The reification of the newline-delimited block (nd-block) into a hierarchy in combination with an edit history just made concepts easier for me to express
-
-## What I'm Building
-
-I don't have a name for this quite yet, but here's what I aim to build and dogfood for my own blog:
-
-1. **Git-based publication**
-   - Push to publish
-   - Git provides many primitives to make this work robustly
-
-2. **CRDT-based edit history**
-   - Must be part of the Git history
-   - Sits on top of Git
-
-3. **Local-first editor experience**
-   - Completely free (as long as git hosting and static site hosting is free)
-   - First-class local-first experience is necessary
-
-4. **Astro Integration**
-   - Supports most popular frameworks via Islands
-   - Provides CMS primitives
-   - Could make headless CMS experience a compile-time event
-
-## On Concept-based Design
-
-This isn't directly related to note-taking, but I had to write this down for why I love Ink & Switch. They turn my vibes into clear concepts I can exposit upon and further develop, they put a name to these nebulous things we call ideas and crystallise them for further catalysis.
-
-I'm defining Concept-based Design as a design thought process where you name and shame the vibes you're getting in order to convert them into actionable artefacts: Concepts. If you don't care about this, feel free not to, this is for my fellow NDs who have to explicitly learn how to think the "obvious" in order to make sense of this neurotypical world.
+    I love Ink & Switch.
+    
+    There’s all this stuff floating around in my head. We call them ideas, but being neurodivergent, ideas are more nebulous clouds which can come and go, but often leave a bit of a residue, a friction even if they disappear, a kind of shadow.
+    
+    Which means ideas may come and go, but they never fully leave. Some I wish would stick around longer than others, but others I wish would leave sooner than not.
+    
+    Thankfully, today I’ve found a way to move forward productively on some of these more productive ideas, hence why I love Ink & Switch.
+    
+    Via their [Dispatch](https://www.inkandswitch.com/newsletter/) (which doesn’t show up very easily, mind you. With all the talk about time-based interfaces, their feed is an awful example of that) I found out about Alexander Obernauer’s work on OLLOS, which is a wonderful exploratory treatise on time and its interaction with the fragments and artefacts of our day and life. [Alex’s article](https://alexanderobenauer.com/ollos/) on this really helped me catalyse thought on what time’s role is in the artefacts I produce (notes, thoughts, documents, whatever) and the cognitive load my tools are supposed to take on by making it easy to write for later, a practise somewhat facilitated by tools like the spaced recall (spaced repetition to him) and the “Today” recall and review view (I’m paraphrasing here because I can’t really be bothered by terminology if it doesn’t accurately reflect what I’m trying to think about. Apologies in advance.)
+    
+    After finishing that treatise on OLLOS (thank you very much, Alex, I look forward to playing with the Framework item store in the future!) I had the chance to look back on the work done on [Patchwork](https://www.inkandswitch.com/patchwork/notebook/). Like I said earlier, a “lab notebook” with very little exposition isn’t a very good way to keep people updated meaningfully (now that’s something to explore with named version control eh? imagine controlling your RSS feed with that or something) but nonetheless, Google’s app feed is something I rely on to give me interesting and relevant news, and I’m quite happy it surfaced the Dispatch even after so long.
+    
+    Patchwork is… like it’s name, a bit of a patchwork of ideas on version control (VCS.) In a way I’m glad I waited so long to look at the progress because at least now I can ingest, process and think more about the ideas presented with more context. Much like it’s name, I guess it takes time to weave together, and considering the rate of work today and the context we often end up viewing it in, I think it was better for me to view it at a further stage of completion rather than just 3 squares (updates) in.
+    
+    Going through the updates (I’m at about post 6 now, [Simple Branching](https://www.inkandswitch.com/patchwork/notebook/06/)) I’m able to think a little better, more clearly and atomically on the ideas I have on note-taking. I’ve pinned down a few small concepts for what I’ve come to expect:
+    
+    - Autosaved Edit History
+        - With OLLOS I’ve come to recognise how important a time-based context is for me. Edit history is important for that, and a good user-facing interface to that History is just as important.
+        - Timelines and depicting linking across said timelines is something that will be tough to do as information density arises, I wonder if that actually becomes an issue in practise?
+        - Autosaving is the foundation of a robust edit history, without it, I cannot trust that my intent will be depicted accurately enough to provide a good context to my thought process. (jumping, editing, adding assets, etc.)
+    - Newline-based blocking
+        - Notion was the first to introduce this to me, which I guess is why it’s fitting I start this post with Notion, even if I move on to new tools later.
+        - The important concept is the ability to reorder and change the hierarchy of a small enough unit of thought to properly represent my ideas. That unit (which I’m sure wasn’t discovered by Notion exclusively) is the newline-based block.
+            - You wouldn’t think it with the way Notion exports your files (each block is surrounded by newlines in Markdown) but yes, Notion is (in my approximation) newline-based.
+        - The reification of the newline-delimited block (nd-block) into a hierarchy in combination with an edit history (yes, despite being not particularly robust) just made concepts easier for me to express without worrying about whether the friction of editing would slow the speed of thought down as it would in other products like Google Docs and Obsidian. This is the alpha Notion has IMO, and thankfully, is easily (but not non-trivially) replicated as a common editor experience, which I fully intend to replicate across my work. (Linear own rich text editor being a great example of a similarly frictionless editor experience.)
+        - I cannot restate this enough: reordering after the fact permits the non-linear thought process I inevitably take to flow freely. I must have reordering in order to reform my thoughts into an artefact that will, in fact, be understood to a wider audience.
+    
+    These concepts are something I realise have been holding me back from blogging on a more frequent basis. I don’t have an income consistent enough for me to host a friction-free editor experience that both preserves my thought process (see [Autosaved Edit History](https://www.notion.so/Autosaved-Edit-History-9acef86604e047c78838db8ebcb33133?pvs=21)) and gives me the necessary tools to think and exposit freely. 
+    
+    So static-site tooling is out of the question (because Git doesn’t provide autosave-based editor history (I know about GitDoc, I just don’t want to have to think about this stuff and configure things) and nice block-based stuff like TinaCMS (and **shudder** Wordpress Gutenberg, just to give credit where credit’s due I guess) is still hosted “live” (I consider this the difference between things like Github Pages, CloudFlare Pages and Vercel, Fly.io, DigitalOcean, whatever) which requires ongoing personal cost to me.
+    
+    Part of me really just wants a rounded experience, taking care of the tooling requirements I’ve indicated above, but at the same time only requiring the infrastructure for a static site, a Git repo.
+    
+    And then I realised after all this exposition, “hey, wait. I’m a developer, I can make this!”
+    
+     I don’t have a name for this quite yet, but here’s the gist of what I will aim to be building and dogfooding for my own blog:
+    
+    - Git-based publication
+        - Push to publish. Doesn’t get any easier than that, and cannot be made more complex than this. Branching and whatever will have to find it’s own semantic place (still haven’t thought much about this) but Git already provides so many of the primitives to make this work robustly.
+    - CRDT-based edit history
+        - This may not necessarily be viewed by blog viewers, but this will have to be part of the Git history in a way that really just sits on top of Git.
+    - Local-first editor experience
+        - Now, this is the kicker. I think I’ve seen a product somewhere that did the git-based blog editor thing (I couldn’t find it until I realised it’s TinaCMS. 🤦) but it’s editor relied on a hosted solution. To make this completely free (as long as your git hosting and static site hosting is free, which is trivial with Github and Vercel/Netlify) a first-class local-first experience will be necessary. If I can feasibly combine Astro and the Tina CMS experience, I am good to go!
+    - Astro
+        - Need I say more? Astro supports most popular frameworks via Islands, and already provides the CMS primitives I don’t really want to care about. If I can make the headless CMS experience a compile-time event, I could theoretically reap all the benefits with very few (I am hedging my bets here) downsides.
+    
+    ## Tidbits
+    
+    - Concept-based Design
+        - This isn’t directly related to note-taking, but I had to write this down for why I love Ink & Switch. They turn my vibes into clear concepts I can exposit upon and further develop, they put a name to these nebulous things we call ideas and crystallise them for further catalysis in a way I really need to learn to do. I’m calling what I believe they’re doing “Concept-based Design.”
+        - I’m defining Concept-based Design as a design thought process where you name and shame the vibes you’re getting in order to convert them into actionable artefacts: Concepts. Yes, I’m Mr. Obvious, but I’m neurodivergent remember? If you don’t care about this, feel free not to, this is for my fellow NDs who have to explicitly learn how to think the “obvious” in order to make sense of this neurotypical world.
+        - This might be as obvious as something like the OODA Loop, but nonetheless I write this down for the thought record.
