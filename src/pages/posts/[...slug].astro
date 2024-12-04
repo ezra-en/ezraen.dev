@@ -28,7 +28,8 @@ const { Content } = await post.render();
         </a>
       </header>
     <article class="max-w-3xl mx-auto">
-      <!-- Back Link -->
+      <!-- Back Link  -->
+       <!-- This is ugly-ass, I'd like to think about making it a proper breadcrumb if stuff does get that nested. Nutshell integration is also something I'd like to think about. -->
       <!-- <a href="/" 
          class="inline-flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white mb-12 group">
         <ChevronLeft class="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -36,7 +37,7 @@ const { Content } = await post.render();
       </a> -->
 
       <!-- Article Header -->
-      <header class="mb-16">
+      <header class="mb-10">
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           {post.data.title}
         </h1>
